@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource id="bd2a351b-ac64-4124-a15e-6d13b36023ba" name="Artists - ID" path="/v1/artists/{ID}" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="bd2a351b-ac64-4124-a15e-6d13b36023bafileName">Artists---ID</con:setting>
+  </con:settings>
+  <con:parameters>
+    <con:parameter required="true">
+      <con:name>ID</con:name>
+      <con:value>ID</con:value>
+      <con:style>TEMPLATE</con:style>
+      <con:default>ID</con:default>
+    </con:parameter>
+  </con:parameters>
+  <con:method id="f174223f-872e-4019-9e2a-e218c23c3e02" method="GET" name="Method 1">
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json; charset=utf-8</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:element>llp:Response</con:element>
+    </con:representation>
+    <con:representation type="FAULT">
+      <con:mediaType>application/json; charset=utf-8</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:element>llp:Fault</con:element>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType/>
+      <con:status>0</con:status>
+      <con:params/>
+      <con:element>data</con:element>
+    </con:representation>
+    <con:request id="822d07e9-03dc-4b82-a9e7-8dc419faf177" mediaType="application/json" name="Request 1">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>https://api.spotify.com</con:endpoint>
+      <con:request/>
+      <con:originalUri>https://api.spotify.com/v1/artists/4LLpKhyESsyAXpc4laK94U</con:originalUri>
+      <con:credentials>
+        <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters>
+        <con:entry key="ID" value="4LLpKhyESsyAXpc4laK94U"/>
+      </con:parameters>
+      <con:environmentSpec>
+        <con:entry environmentId="fcd6baa0-6318-4866-8e60-77015c7d6f90">
+          <con:authProfile>Sam_Auth</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="65e7fecd-12ef-48f2-9332-8304cb881123">
+          <con:authProfile>Sam_Auth</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="d620f373-fa44-4949-97ea-b813003dd3e8">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="0c81de72-7761-426f-a33f-31e9f3406cdd">
+          <con:authProfile>Samuel1</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="ddaf92d0-02d9-4241-a8ee-5df6b1c96e08">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:request>
+    <con:environmentSpec>
+      <con:entry environmentId="fcd6baa0-6318-4866-8e60-77015c7d6f90">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="d620f373-fa44-4949-97ea-b813003dd3e8">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="0c81de72-7761-426f-a33f-31e9f3406cdd">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="ddaf92d0-02d9-4241-a8ee-5df6b1c96e08">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+    </con:environmentSpec>
+  </con:method>
+  <con:environmentSpec>
+    <con:entry environmentId="fcd6baa0-6318-4866-8e60-77015c7d6f90">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="d620f373-fa44-4949-97ea-b813003dd3e8">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="0c81de72-7761-426f-a33f-31e9f3406cdd">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="ddaf92d0-02d9-4241-a8ee-5df6b1c96e08">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:resource>

@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource id="964142e1-7e83-410d-83de-e9dca9129cc4" name="Playlist - ID" path="/v1/playlists/{Playlist_ID}/tracks" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="964142e1-7e83-410d-83de-e9dca9129cc4fileName">Playlist---ID</con:setting>
+  </con:settings>
+  <con:parameters>
+    <con:parameter required="true">
+      <con:name>Playlist_ID</con:name>
+      <con:value>Playlist_ID</con:value>
+      <con:style>TEMPLATE</con:style>
+      <con:default>Playlist_ID</con:default>
+    </con:parameter>
+  </con:parameters>
+  <con:resource id="f4da9cb1-5f9c-4bcc-9552-4e5e5066cf6f" name="playlists" path="">
+    <con:settings>
+      <con:setting id="f4da9cb1-5f9c-4bcc-9552-4e5e5066cf6ffileName">playlists</con:setting>
+    </con:settings>
+    <con:parameters/>
+    <con:method id="9274cb32-37dd-4b6d-962d-d31b41e6d448" method="GET" name="Method 1">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter required="true">
+          <con:name>uris</con:name>
+          <con:value/>
+          <con:style>QUERY</con:style>
+          <con:default/>
+        </con:parameter>
+      </con:parameters>
+      <con:representation type="FAULT">
+        <con:mediaType>application/json</con:mediaType>
+        <con:status>401</con:status>
+        <con:params/>
+        <con:element>trac:Fault</con:element>
+      </con:representation>
+      <con:representation type="FAULT">
+        <con:mediaType>application/json; charset=utf-8</con:mediaType>
+        <con:status>404</con:status>
+        <con:params/>
+        <con:element>trac:Fault</con:element>
+      </con:representation>
+      <con:request id="73dcd68b-7883-45dd-aa3d-1006adb91540" mediaType="application/json" name="Add Items to Playlist">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://api.spotify.com</con:endpoint>
+        <con:request/>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="uris" value="temp"/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>Playlist_ID</con:entry>
+          <con:entry>uris</con:entry>
+        </con:parameterOrder>
+        <con:environmentSpec>
+          <con:entry environmentId="65e7fecd-12ef-48f2-9332-8304cb881123">
+            <con:authProfile>Sam_Auth</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="fcd6baa0-6318-4866-8e60-77015c7d6f90">
+            <con:authProfile>Sam_Auth</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="d620f373-fa44-4949-97ea-b813003dd3e8">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="0c81de72-7761-426f-a33f-31e9f3406cdd">
+            <con:authProfile>Samuel1</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="ddaf92d0-02d9-4241-a8ee-5df6b1c96e08">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:request>
+      <con:environmentSpec>
+        <con:entry environmentId="d620f373-fa44-4949-97ea-b813003dd3e8">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="0c81de72-7761-426f-a33f-31e9f3406cdd">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="ddaf92d0-02d9-4241-a8ee-5df6b1c96e08">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:method>
+    <con:environmentSpec>
+      <con:entry environmentId="d620f373-fa44-4949-97ea-b813003dd3e8">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="0c81de72-7761-426f-a33f-31e9f3406cdd">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="ddaf92d0-02d9-4241-a8ee-5df6b1c96e08">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+    </con:environmentSpec>
+  </con:resource>
+  <con:method id="22857d42-9cc6-42bb-a959-92cf90c5e1ae" method="GET" name="Get Playlist Details by ID">
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="FAULT">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>401</con:status>
+      <con:params/>
+      <con:element>p4h:Fault</con:element>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json; charset=utf-8</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:element>p4h:Response</con:element>
+    </con:representation>
+    <con:request id="266eb1bc-676d-4294-942d-ff6f00ca21f1" mediaType="application/json" name="Request 1">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>https://api.spotify.com</con:endpoint>
+      <con:request/>
+      <con:originalUri>https://api.spotify.com/v1/playlists/2Oerx7Iwh2yl9ttpV3Grms</con:originalUri>
+      <con:credentials>
+        <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters>
+        <con:entry key="Playlist_ID" value="2Oerx7Iwh2yl9ttpV3Grms"/>
+      </con:parameters>
+      <con:environmentSpec>
+        <con:entry environmentId="fcd6baa0-6318-4866-8e60-77015c7d6f90">
+          <con:authProfile>Sam_Auth</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="65e7fecd-12ef-48f2-9332-8304cb881123">
+          <con:authProfile>Sam_Auth</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="d620f373-fa44-4949-97ea-b813003dd3e8">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="0c81de72-7761-426f-a33f-31e9f3406cdd">
+          <con:authProfile>Samuel1</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="ddaf92d0-02d9-4241-a8ee-5df6b1c96e08">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:request>
+    <con:environmentSpec>
+      <con:entry environmentId="fcd6baa0-6318-4866-8e60-77015c7d6f90">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="d620f373-fa44-4949-97ea-b813003dd3e8">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="0c81de72-7761-426f-a33f-31e9f3406cdd">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="ddaf92d0-02d9-4241-a8ee-5df6b1c96e08">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+    </con:environmentSpec>
+  </con:method>
+  <con:method id="8e6e0d65-ddd3-4590-b9fd-33f21c7b30ee" method="PUT" name="Update Playlist Details">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>name</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>public</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="FAULT">
+      <con:mediaType>application/json; charset=utf-8</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:element>trac:Fault</con:element>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:request id="d57634b4-2627-406f-bd05-79a54b1c39a3" mediaType="application/json" name="Request 1" postQueryString="false">
+      <con:settings/>
+      <con:endpoint>https://api.spotify.com</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters>
+        <con:entry key="public" value="Boolean T or F"/>
+        <con:entry key="name" value="Update_Name"/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>Playlist_ID</con:entry>
+        <con:entry>name</con:entry>
+        <con:entry>public</con:entry>
+      </con:parameterOrder>
+      <con:environmentSpec>
+        <con:entry environmentId="fcd6baa0-6318-4866-8e60-77015c7d6f90">
+          <con:authProfile>Sam_Auth</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="65e7fecd-12ef-48f2-9332-8304cb881123">
+          <con:authProfile>Sam_Auth</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="d620f373-fa44-4949-97ea-b813003dd3e8">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="0c81de72-7761-426f-a33f-31e9f3406cdd">
+          <con:authProfile>Samuel1</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="ddaf92d0-02d9-4241-a8ee-5df6b1c96e08">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:request>
+    <con:environmentSpec>
+      <con:entry environmentId="fcd6baa0-6318-4866-8e60-77015c7d6f90">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="d620f373-fa44-4949-97ea-b813003dd3e8">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="0c81de72-7761-426f-a33f-31e9f3406cdd">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="ddaf92d0-02d9-4241-a8ee-5df6b1c96e08">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+    </con:environmentSpec>
+  </con:method>
+  <con:environmentSpec>
+    <con:entry environmentId="fcd6baa0-6318-4866-8e60-77015c7d6f90">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="d620f373-fa44-4949-97ea-b813003dd3e8">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="0c81de72-7761-426f-a33f-31e9f3406cdd">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="ddaf92d0-02d9-4241-a8ee-5df6b1c96e08">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:resource>

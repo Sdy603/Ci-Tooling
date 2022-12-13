@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testSuite id="74ac294a-37f5-42cd-b41e-ed64d32478f7" name="New Release" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="74ac294a-37f5-42cd-b41e-ed64d32478f7fileName">New-Release</con:setting>
+  </con:settings>
+  <con:runType>SEQUENTIAL</con:runType>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testSuite>

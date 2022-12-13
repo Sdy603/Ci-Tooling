@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testSuite id="572af173-ad44-4c7e-aa54-fa2476aaa75f" name="Track Analysis" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="572af173-ad44-4c7e-aa54-fa2476aaa75ffileName">Track-Analysis</con:setting>
+  </con:settings>
+  <con:runType>SEQUENTIAL</con:runType>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testSuite>

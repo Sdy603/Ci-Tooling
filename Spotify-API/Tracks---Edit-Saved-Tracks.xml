@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource id="7f93385c-25f6-4cd6-98c9-beaafacfe6cd" name="Tracks - Edit Saved Tracks" path="/v1/me/tracks" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="7f93385c-25f6-4cd6-98c9-beaafacfe6cdfileName">Tracks---Edit-Saved-Tracks</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method id="3f1463d4-c4ff-4aa3-9371-89f07466e1ce" method="DELETE" name="Delete Track">
+    <con:settings/>
+    <con:parameters/>
+    <con:request id="be90fd06-3351-451e-825f-7ba75bb6258f" mediaType="application/json" name="Request 1" postQueryString="false">
+      <con:settings/>
+      <con:endpoint>https://api.spotify.com</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+      <con:environmentSpec>
+        <con:entry environmentId="fcd6baa0-6318-4866-8e60-77015c7d6f90">
+          <con:authProfile>Sam_Auth</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="65e7fecd-12ef-48f2-9332-8304cb881123">
+          <con:authProfile>Sam_Auth</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="d620f373-fa44-4949-97ea-b813003dd3e8">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="0c81de72-7761-426f-a33f-31e9f3406cdd">
+          <con:authProfile>Samuel1</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="ddaf92d0-02d9-4241-a8ee-5df6b1c96e08">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:request>
+    <con:environmentSpec>
+      <con:entry environmentId="fcd6baa0-6318-4866-8e60-77015c7d6f90">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="d620f373-fa44-4949-97ea-b813003dd3e8">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="0c81de72-7761-426f-a33f-31e9f3406cdd">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="ddaf92d0-02d9-4241-a8ee-5df6b1c96e08">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+    </con:environmentSpec>
+  </con:method>
+  <con:method id="c7c34f62-1b0b-49fc-8171-5aef976ae766" method="GET" name="Get Track">
+    <con:settings/>
+    <con:parameters/>
+    <con:request id="9b08f876-6dff-46f7-85f1-3e2f092109ea" mediaType="application/json" name="Request 1">
+      <con:settings/>
+      <con:endpoint>https://api.spotify.com</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+      <con:environmentSpec>
+        <con:entry environmentId="fcd6baa0-6318-4866-8e60-77015c7d6f90">
+          <con:authProfile>Sam_Auth</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="65e7fecd-12ef-48f2-9332-8304cb881123">
+          <con:authProfile>Sam_Auth</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="d620f373-fa44-4949-97ea-b813003dd3e8">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="0c81de72-7761-426f-a33f-31e9f3406cdd">
+          <con:authProfile>Samuel1</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="ddaf92d0-02d9-4241-a8ee-5df6b1c96e08">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:request>
+    <con:environmentSpec>
+      <con:entry environmentId="fcd6baa0-6318-4866-8e60-77015c7d6f90">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="d620f373-fa44-4949-97ea-b813003dd3e8">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="0c81de72-7761-426f-a33f-31e9f3406cdd">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="ddaf92d0-02d9-4241-a8ee-5df6b1c96e08">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+    </con:environmentSpec>
+  </con:method>
+  <con:method id="1cf4ff08-db3a-49a7-9089-609ac07ef21f" method="PUT" name="Add Track">
+    <con:settings/>
+    <con:parameters/>
+    <con:request id="c87b26e0-9273-4363-984e-90e1f4073d1e" mediaType="application/json" name="Request 1" postQueryString="false">
+      <con:settings/>
+      <con:endpoint>https://api.spotify.com</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+      <con:environmentSpec>
+        <con:entry environmentId="fcd6baa0-6318-4866-8e60-77015c7d6f90">
+          <con:authProfile>Sam_Auth</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="65e7fecd-12ef-48f2-9332-8304cb881123">
+          <con:authProfile>Sam_Auth</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="d620f373-fa44-4949-97ea-b813003dd3e8">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="0c81de72-7761-426f-a33f-31e9f3406cdd">
+          <con:authProfile>Samuel1</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="ddaf92d0-02d9-4241-a8ee-5df6b1c96e08">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:request>
+    <con:environmentSpec>
+      <con:entry environmentId="fcd6baa0-6318-4866-8e60-77015c7d6f90">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="d620f373-fa44-4949-97ea-b813003dd3e8">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="0c81de72-7761-426f-a33f-31e9f3406cdd">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="ddaf92d0-02d9-4241-a8ee-5df6b1c96e08">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+    </con:environmentSpec>
+  </con:method>
+  <con:environmentSpec>
+    <con:entry environmentId="fcd6baa0-6318-4866-8e60-77015c7d6f90">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="d620f373-fa44-4949-97ea-b813003dd3e8">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="0c81de72-7761-426f-a33f-31e9f3406cdd">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="ddaf92d0-02d9-4241-a8ee-5df6b1c96e08">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:resource>

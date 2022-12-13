@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase discardOkResults="false" failOnError="false" failTestCaseOnErrors="false" id="52e5c6e1-7ae9-47bc-bdee-9df8da1352fe" keepSession="false" name="DBSourceToAPI" searchProperties="true" timeout="0" wsrmAckTo="" wsrmEnabled="false" wsrmVersion="1.0" zephyrTestId="" zephyrTestName="" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="IncludeOverview">true</con:setting>
+    <con:setting id="IncludeResults">true</con:setting>
+    <con:setting id="FlowLayout">false</con:setting>
+    <con:setting id="ErrorDetails">true</con:setting>
+    <con:setting id="IncludeCoverage">true</con:setting>
+    <con:setting id="438ae1de-3be5-4154-addf-0ccc9e42e5f2fileName">InsertInfoToDB</con:setting>
+    <con:setting id="52e5c6e1-7ae9-47bc-bdee-9df8da1352fefileName">DBSourceToAPI</con:setting>
+    <con:setting id="com.smartbear.ready.history.view.ClientResultsView$OptionsForm@disable_log">false</con:setting>
+    <con:setting id="com.smartbear.ready.history.view.ClientResultsView$OptionsForm@errors_only">false</con:setting>
+    <con:setting id="com.smartbear.ready.history.view.ClientResultsView$OptionsForm@follow">false</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>3</con:savedRecentRuns>
+  <con:testStep type="datasource" name="Data Source" id="5adb28ab-fd58-4e4d-b6c1-667c5e7aba9f">
+    <con:settings>
+      <con:setting id="com.eviware.soapui.impl.wsdl.teststeps.datasource.DataSourceContainer@prepared-properties">&lt;xml-fragment/></con:setting>
+    </con:settings>
+    <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:dataSource type="JDBC">
+        <con:configuration>
+          <driver>net.sourceforge.jtds.jdbc.Driver</driver>
+          <connstr>jdbc:jtds:sqlserver://127.0.0.1:1433/Sams_Music_DB;domain=Smartbear.com;trusted_connection=yes</connstr>
+          <pass/>
+          <Connection>Sams_Music_DB_JTDS( Default environment )</Connection>
+          <query>Select Top 5 Tracks.Track_ID as Tracks_Track_ID, Albums.Album_Name as Albums_Album_Name
+From Tracks Inner Join
+  Albums On Tracks.Artist_ID = Albums.Artist_ID</query>
+          <fetchSize/>
+          <stored-procedure>false</stored-procedure>
+        </con:configuration>
+      </con:dataSource>
+      <con:shared>true</con:shared>
+      <con:restartShared>true</con:restartShared>
+      <con:property>Tracks_Track_ID</con:property>
+      <con:property>Albums_Album_Name</con:property>
+      <con:restartOnRun>true</con:restartOnRun>
+      <con:stopDatasourceExhausted>false</con:stopDatasourceExhausted>
+    </con:config>
+  </con:testStep>
+  <con:testStep id="011a9f45-19f6-44fa-a44f-448beec02cd8" name="Request 1" type="restrequest">
+    <con:settings/>
+    <con:config xsi:type="con:RestRequestStep" methodName="Method 1" resourcePath="/v1/tracks/{id}" service="Spotify API" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest id="88fb5d70-d07d-427d-aa61-3205d40024a1" mediaType="application/json" name="Request 1">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://api.spotify.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://api.spotify.com/v1/tracks/7ywzEdEuVG1lsjsRCGJfLy</con:originalUri>
+        <con:assertion id="d8542c61-5c7e-4e78-bd8a-376fdf42982e" name="Valid HTTP Status Codes" type="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion id="c5111a45-8515-4bf1-8599-cfbb1342a634" name="Response SLA" type="Response SLA Assertion">
+          <con:configuration>
+            <SLA>300</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion id="9b6ed931-b1c5-4b24-9279-2ca5daf458a8" name="JSONPath Existence Match" type="JsonPath Existence Match">
+          <con:configuration>
+            <path>$['album']['artists'][0]['name']</path>
+            <content>true</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="market" value="US"/>
+          <con:entry key="id" value="${Data Source#Tracks_Track_ID}"/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>id</con:entry>
+          <con:entry>market</con:entry>
+        </con:parameterOrder>
+        <con:environmentSpec>
+          <con:entry environmentId="fcd6baa0-6318-4866-8e60-77015c7d6f90">
+            <con:authProfile>Sam_Auth</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="65e7fecd-12ef-48f2-9332-8304cb881123">
+            <con:authProfile>Sam_Auth</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="d620f373-fa44-4949-97ea-b813003dd3e8">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="0c81de72-7761-426f-a33f-31e9f3406cdd">
+            <con:authProfile>Samuel1</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="ddaf92d0-02d9-4241-a8ee-5df6b1c96e08">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep id="5e2a9980-2eee-43f6-aa31-c222707cdc1e" name="Delay" type="delay">
+    <con:settings/>
+    <con:config>
+      <delay>1000</delay>
+    </con:config>
+  </con:testStep>
+  <con:testStep id="f166f1db-13ae-4f8a-bd50-b8968880a33e" name="Data Source Loop" type="datasourceloop">
+    <con:settings/>
+    <con:config>
+      <dataSourceStep>Data Source</dataSourceStep>
+      <targetStep>Request 1</targetStep>
+      <discardResults>false</discardResults>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+  <con:environmentSpec>
+    <con:entry environmentId="fcd6baa0-6318-4866-8e60-77015c7d6f90">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="d620f373-fa44-4949-97ea-b813003dd3e8">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="0c81de72-7761-426f-a33f-31e9f3406cdd">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="ddaf92d0-02d9-4241-a8ee-5df6b1c96e08">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+  <con:tagId>dc3480a9-7c2e-401d-8b60-b4cc621aad39</con:tagId>
+</con:testCase>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase discardOkResults="false" failOnError="false" failTestCaseOnErrors="false" id="4856c694-614e-4380-ae74-b8ef885a28ef" keepSession="false" name="GetMyDevices" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="4856c694-614e-4380-ae74-b8ef885a28effileName">GetMyDevices</con:setting>
+  </con:settings>
+  <con:testStep id="cb1963f8-53b2-463d-ba9b-80e18bb85829" name="GetMyDevice" type="restrequest">
+    <con:settings/>
+    <con:config xsi:type="con:RestRequestStep" methodName="Method 1" resourcePath="/v1/me/player/devices" service="Spotify API" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest id="b7df99b6-3b94-4880-badc-309f05e2183e" mediaType="application/json" name="GetMyDevice">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://api.spotify.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://api.spotify.com/v1/me/player/devices</con:originalUri>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+        <con:environmentSpec>
+          <con:entry environmentId="fcd6baa0-6318-4866-8e60-77015c7d6f90">
+            <con:authProfile>Sam_Auth</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="65e7fecd-12ef-48f2-9332-8304cb881123">
+            <con:authProfile>Sam_Auth</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="d620f373-fa44-4949-97ea-b813003dd3e8">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="0c81de72-7761-426f-a33f-31e9f3406cdd">
+            <con:authProfile>Samuel1</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="ddaf92d0-02d9-4241-a8ee-5df6b1c96e08">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+  <con:environmentSpec>
+    <con:entry environmentId="d620f373-fa44-4949-97ea-b813003dd3e8">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="0c81de72-7761-426f-a33f-31e9f3406cdd">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="ddaf92d0-02d9-4241-a8ee-5df6b1c96e08">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:testCase>
