@@ -175,8 +175,17 @@
             <SLA>400</SLA>
           </con:configuration>
         </con:assertion>
+        <con:assertion type="JsonPath Match" id="d93f7d4c-af40-48cd-ae36-f9d8d17410ad" name="Match content of [id]">
+          <con:configuration>
+            <path>$['tracks'][0]['album']['artists'][0]['id']</path>
+            <content>${GetArtistInfo#Response#$['id']}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
         <con:credentials>
-          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:selectedAuthProfile>Inherit From Service</con:selectedAuthProfile>
           <con:authType>No Authorization</con:authType>
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>

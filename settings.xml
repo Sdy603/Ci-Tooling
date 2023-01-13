@@ -17,7 +17,7 @@ the same ports on the virtual service.</con:description>
   <con:entry key="Test Suite Tags" value=""/>
   <con:entry key="Select Report Type" value="JUnit-Style report for automation"/>
   <con:entry key="System Properties" value=""/>
-  <con:entry key="Test Suite" value="Spotify Artists"/>
+  <con:entry key="Test Suite" value="Spotify DB Suite"/>
   <con:entry key="Run in-process" value="false"/>
   <con:entry key="Password" value=""/>
   <con:entry key="Print Report" value="true"/>
@@ -26,7 +26,7 @@ the same ports on the virtual service.</con:description>
   <con:entry key="Export JUnit Results with test properties" value="false"/>
   <con:entry key="Global Properties" value=""/>
   <con:entry key="Project Properties" value=""/>
-  <con:entry key="Test Case" value="GetArtistID"/>
+  <con:entry key="Test Case" value="ShuffleArtistTopThree"/>
   <con:entry key="Slack Access Token" value=""/>
   <con:entry key="Project Password" value=""/>
   <con:entry key="Username" value=""/>
@@ -117,6 +117,13 @@ the same ports on the virtual service.</con:description>
       <con:password/>
       <con:connectionProperties/>
     </con:databaseConnection>
+    <con:databaseConnection>
+      <con:name>Mongo</con:name>
+      <con:driver xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      <con:connectionString xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      <con:password/>
+      <con:connectionProperties/>
+    </con:databaseConnection>
   </con:databaseConnectionContainer>
   <con:jmsConnectionContainer/>
   <con:oAuth2ProfileContainer>
@@ -126,10 +133,10 @@ the same ports on the virtual service.</con:description>
       <con:authorizationURI>https://accounts.spotify.com/authorize</con:authorizationURI>
       <con:accessTokenURI>https://accounts.spotify.com/api/token</con:accessTokenURI>
       <con:redirectURI>http://localhost:8080/callback/</con:redirectURI>
-      <con:accessToken>BQAqS8mo3BDzR4cG6VxKb7byhs6d0jCJ0Z4eDLSs4C5A2AKoqwv8mz8ZXwB-kT8RVmH30Pz9RhN8P9eOo5RYfRu_qpNATIWoE4uPB26ySc_z6xZcpK2lI1qNsaNKEDfHktqFn7vgrFCW5vQZTfym4MfAXNpJ0igmIgL1j7naxbG2ALwU8f7HC8208vqdzmguVUyGV7QZoqf9uE5GUzQIna2KYHadppheG8tkCkltIfzFHwj-Pxd0Dfb_SKXUUJDANLu10SzpaydE80G3bAicT-uJrCbiGhJOCWK9PxNnHa5cGfMYqJnWWLSr</con:accessToken>
+      <con:accessToken>BQCvih-mdK4ZK29tGoT2Xi5b1XLTG86il6yfbD0oOeFbeRYap8z8QjNvafvgAHsE8Gc4bhLAw1WXW8fZSQKAy38IkAljbxnOg3oTU_s51j02-P-zi5VAPFNQMFO6tH2QU_x-sU2eYBB7JG-v1chXZukDmSNsSFmDlrOhrZXU4W14upJHKzvPERWLJwGPGXTpiwJJAlUFC9pcngzQv4tDsCvfcnqpI7Y0JrLV6czGJM1Qp7r-PCvhOuYj6bhF56gLzpoGpP7ytiDbHnGwb0sbElyCm7hzvGz0zl4nBtkkEKEPtTCrelRfNkQK</con:accessToken>
       <con:accessTokenPosition>HEADER</con:accessTokenPosition>
       <con:accessTokenStartingStatus>RETRIEVED_FROM_SERVER</con:accessTokenStartingStatus>
-      <con:accessTokenIssuedTime>1670881080</con:accessTokenIssuedTime>
+      <con:accessTokenIssuedTime>1673030560</con:accessTokenIssuedTime>
       <con:manualAccessTokenExpirationTime/>
       <con:manualAccessTokenExpirationTimeUnit>SECONDS</con:manualAccessTokenExpirationTimeUnit>
       <con:clientID>0b8dfba8dd274b45be445245e4139691</con:clientID>
@@ -141,6 +148,16 @@ the same ports on the virtual service.</con:description>
       <con:accessTokenExpirationTime>3600</con:accessTokenExpirationTime>
       <con:useAuthHeader>true</con:useAuthHeader>
       <con:applyJwtAssertion>false</con:applyJwtAssertion>
+      <con:jwtConfiguration/>
+      <con:responseType>id_token</con:responseType>
+    </con:oAuth2Profile>
+    <con:oAuth2Profile>
+      <con:name>JWT Auth</con:name>
+      <con:type>OAuth 2.0</con:type>
+      <con:accessTokenPosition>HEADER</con:accessTokenPosition>
+      <con:manualAccessTokenExpirationTimeUnit>SECONDS</con:manualAccessTokenExpirationTimeUnit>
+      <con:oAuth2Flow>JWT_GRANT</con:oAuth2Flow>
+      <con:refreshAccessTokenMethod>AUTOMATIC</con:refreshAccessTokenMethod>
       <con:jwtConfiguration/>
       <con:responseType>id_token</con:responseType>
     </con:oAuth2Profile>
@@ -203,6 +220,13 @@ the same ports on the virtual service.</con:description>
         <con:name>Temp</con:name>
         <con:connectionProperties/>
       </con:databaseConnection>
+      <con:databaseConnection>
+        <con:name>Mongo</con:name>
+        <con:driver xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <con:connectionString xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <con:password/>
+        <con:connectionProperties/>
+      </con:databaseConnection>
     </con:databaseConnectionContainer>
     <con:jmsConnectionContainer/>
   </con:environment>
@@ -230,6 +254,13 @@ the same ports on the virtual service.</con:description>
         <con:name>Temp</con:name>
         <con:connectionProperties/>
       </con:databaseConnection>
+      <con:databaseConnection>
+        <con:name>Mongo</con:name>
+        <con:driver xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <con:connectionString xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <con:password/>
+        <con:connectionProperties/>
+      </con:databaseConnection>
     </con:databaseConnectionContainer>
     <con:jmsConnectionContainer/>
   </con:environment>
@@ -249,6 +280,13 @@ the same ports on the virtual service.</con:description>
       </con:databaseConnection>
       <con:databaseConnection>
         <con:name>Temp</con:name>
+        <con:connectionProperties/>
+      </con:databaseConnection>
+      <con:databaseConnection>
+        <con:name>Mongo</con:name>
+        <con:driver xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <con:connectionString xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <con:password/>
         <con:connectionProperties/>
       </con:databaseConnection>
     </con:databaseConnectionContainer>
@@ -275,6 +313,13 @@ the same ports on the virtual service.</con:description>
         <con:name>Temp</con:name>
         <con:connectionProperties/>
       </con:databaseConnection>
+      <con:databaseConnection>
+        <con:name>Mongo</con:name>
+        <con:driver xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <con:connectionString xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <con:password/>
+        <con:connectionProperties/>
+      </con:databaseConnection>
     </con:databaseConnectionContainer>
     <con:jmsConnectionContainer/>
   </con:environment>
@@ -297,6 +342,13 @@ the same ports on the virtual service.</con:description>
       </con:databaseConnection>
       <con:databaseConnection>
         <con:name>Temp</con:name>
+        <con:connectionProperties/>
+      </con:databaseConnection>
+      <con:databaseConnection>
+        <con:name>Mongo</con:name>
+        <con:driver xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <con:connectionString xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <con:password/>
         <con:connectionProperties/>
       </con:databaseConnection>
     </con:databaseConnectionContainer>
@@ -322,10 +374,10 @@ the same ports on the virtual service.</con:description>
       <con:authorizationURI>https://accounts.spotify.com/authorize</con:authorizationURI>
       <con:accessTokenURI>https://accounts.spotify.com/api/token</con:accessTokenURI>
       <con:redirectURI>http://localhost:8080/callback/</con:redirectURI>
-      <con:accessToken>BQAqS8mo3BDzR4cG6VxKb7byhs6d0jCJ0Z4eDLSs4C5A2AKoqwv8mz8ZXwB-kT8RVmH30Pz9RhN8P9eOo5RYfRu_qpNATIWoE4uPB26ySc_z6xZcpK2lI1qNsaNKEDfHktqFn7vgrFCW5vQZTfym4MfAXNpJ0igmIgL1j7naxbG2ALwU8f7HC8208vqdzmguVUyGV7QZoqf9uE5GUzQIna2KYHadppheG8tkCkltIfzFHwj-Pxd0Dfb_SKXUUJDANLu10SzpaydE80G3bAicT-uJrCbiGhJOCWK9PxNnHa5cGfMYqJnWWLSr</con:accessToken>
+      <con:accessToken>BQCvih-mdK4ZK29tGoT2Xi5b1XLTG86il6yfbD0oOeFbeRYap8z8QjNvafvgAHsE8Gc4bhLAw1WXW8fZSQKAy38IkAljbxnOg3oTU_s51j02-P-zi5VAPFNQMFO6tH2QU_x-sU2eYBB7JG-v1chXZukDmSNsSFmDlrOhrZXU4W14upJHKzvPERWLJwGPGXTpiwJJAlUFC9pcngzQv4tDsCvfcnqpI7Y0JrLV6czGJM1Qp7r-PCvhOuYj6bhF56gLzpoGpP7ytiDbHnGwb0sbElyCm7hzvGz0zl4nBtkkEKEPtTCrelRfNkQK</con:accessToken>
       <con:accessTokenPosition>HEADER</con:accessTokenPosition>
       <con:accessTokenStartingStatus>RETRIEVED_FROM_SERVER</con:accessTokenStartingStatus>
-      <con:accessTokenIssuedTime>1670881080</con:accessTokenIssuedTime>
+      <con:accessTokenIssuedTime>1673030560</con:accessTokenIssuedTime>
       <con:manualAccessTokenExpirationTime/>
       <con:manualAccessTokenExpirationTimeUnit>SECONDS</con:manualAccessTokenExpirationTimeUnit>
       <con:clientID>0b8dfba8dd274b45be445245e4139691</con:clientID>
@@ -337,6 +389,16 @@ the same ports on the virtual service.</con:description>
       <con:accessTokenExpirationTime>3600</con:accessTokenExpirationTime>
       <con:useAuthHeader>true</con:useAuthHeader>
       <con:applyJwtAssertion>false</con:applyJwtAssertion>
+      <con:jwtConfiguration/>
+      <con:responseType>id_token</con:responseType>
+    </con:oAuth20AuthEntry>
+    <con:oAuth20AuthEntry>
+      <con:name>JWT Auth</con:name>
+      <con:type>OAuth 2.0</con:type>
+      <con:accessTokenPosition>HEADER</con:accessTokenPosition>
+      <con:manualAccessTokenExpirationTimeUnit>SECONDS</con:manualAccessTokenExpirationTimeUnit>
+      <con:oAuth2Flow>JWT_GRANT</con:oAuth2Flow>
+      <con:refreshAccessTokenMethod>AUTOMATIC</con:refreshAccessTokenMethod>
       <con:jwtConfiguration/>
       <con:responseType>id_token</con:responseType>
     </con:oAuth20AuthEntry>

@@ -3,27 +3,38 @@
   <con:settings>
     <con:setting id="720982e8-5998-4126-bde7-254f55ca99a1fileName">Test-Case-2</con:setting>
   </con:settings>
-  <con:testStep id="48b8040e-0636-4f75-a1b6-58457277626a" name="Method 1 - Request 1" type="restrequest">
+  <con:testStep type="restrequest" name="REST Request" id="ca134599-1ccd-4430-82f1-61880bc47486">
     <con:settings/>
-    <con:config xsi:type="con:RestRequestStep" methodName="Method 1" resourcePath="/v1/browse/new-releases" service="Spotify API" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:restRequest id="6980786a-54ed-4526-8f2a-9f07275b0341" mediaType="application/json" name="Method 1 - Request 1">
+    <con:config service="Spotify API" resourcePath="/v1/artists/{id}/top-tracks" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest id="dab560e3-0672-4498-b565-cc55ffc15927" mediaType="application/json" name="REST Request">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
         <con:endpoint>https://api.spotify.com</con:endpoint>
         <con:request/>
-        <con:originalUri>https://api.spotify.com/v1/browse/new-releases</con:originalUri>
+        <con:originalUri>https://api.spotify.com/v1/artists/4LLpKhyESsyAXpc4laK94U/top-tracks</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="256a8d5c-b667-480f-914d-c4ab2154221e" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="61c8b090-d1bc-46b7-b221-24597f6f1235" name="Response SLA">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
         <con:credentials>
           <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
           <con:authType>No Authorization</con:authType>
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
         <con:parameters>
-          <con:entry key="market" value="US"/>
-          <con:entry key="limit" value="3"/>
+          <con:entry key="market" value="OU"/>
+          <con:entry key="id" value="4LLpKhyESsyAXpc4laK94U"/>
         </con:parameters>
         <con:parameterOrder>
-          <con:entry>limit</con:entry>
+          <con:entry>id</con:entry>
           <con:entry>market</con:entry>
         </con:parameterOrder>
         <con:environmentSpec>
