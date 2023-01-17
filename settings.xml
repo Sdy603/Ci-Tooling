@@ -133,10 +133,11 @@ the same ports on the virtual service.</con:description>
       <con:authorizationURI>https://accounts.spotify.com/authorize</con:authorizationURI>
       <con:accessTokenURI>https://accounts.spotify.com/api/token</con:accessTokenURI>
       <con:redirectURI>http://localhost:8080/callback/</con:redirectURI>
-      <con:accessToken>BQCvih-mdK4ZK29tGoT2Xi5b1XLTG86il6yfbD0oOeFbeRYap8z8QjNvafvgAHsE8Gc4bhLAw1WXW8fZSQKAy38IkAljbxnOg3oTU_s51j02-P-zi5VAPFNQMFO6tH2QU_x-sU2eYBB7JG-v1chXZukDmSNsSFmDlrOhrZXU4W14upJHKzvPERWLJwGPGXTpiwJJAlUFC9pcngzQv4tDsCvfcnqpI7Y0JrLV6czGJM1Qp7r-PCvhOuYj6bhF56gLzpoGpP7ytiDbHnGwb0sbElyCm7hzvGz0zl4nBtkkEKEPtTCrelRfNkQK</con:accessToken>
+      <con:accessToken>BQACYIqHy7WMH8mtpPfxeaVqFP5WVbz59DCotg4X59IIbV8Nl4pyiJkBc7zvWDHXlCuIVPss4wxOPwp_lasdC_odbW4BQQW0-oy1rxRyLSYy_C0KOvyDvs0G5BJNzQxJBWEghvXcInGVUWSW7kRtaNo6TG_xS8rhJfm_9dvBG4um0dNchpssCc2ilRj5bs3B_h1-hHN-gzN06S48LX90E2CfPbseb3QDBIYfSYGkQKnYK3iUHjCnKzpier_SIvjPwDqXGsZyoZulTnvG-197ZWpd1J_nMha3aflh2Wb8ABPAuB1O10IPLeem</con:accessToken>
       <con:accessTokenPosition>HEADER</con:accessTokenPosition>
+      <con:accessTokenStatus>RETRIEVED_FROM_SERVER</con:accessTokenStatus>
       <con:accessTokenStartingStatus>RETRIEVED_FROM_SERVER</con:accessTokenStartingStatus>
-      <con:accessTokenIssuedTime>1673030560</con:accessTokenIssuedTime>
+      <con:accessTokenIssuedTime>1673956469</con:accessTokenIssuedTime>
       <con:manualAccessTokenExpirationTime/>
       <con:manualAccessTokenExpirationTimeUnit>SECONDS</con:manualAccessTokenExpirationTimeUnit>
       <con:clientID>0b8dfba8dd274b45be445245e4139691</con:clientID>
@@ -374,10 +375,11 @@ the same ports on the virtual service.</con:description>
       <con:authorizationURI>https://accounts.spotify.com/authorize</con:authorizationURI>
       <con:accessTokenURI>https://accounts.spotify.com/api/token</con:accessTokenURI>
       <con:redirectURI>http://localhost:8080/callback/</con:redirectURI>
-      <con:accessToken>BQCvih-mdK4ZK29tGoT2Xi5b1XLTG86il6yfbD0oOeFbeRYap8z8QjNvafvgAHsE8Gc4bhLAw1WXW8fZSQKAy38IkAljbxnOg3oTU_s51j02-P-zi5VAPFNQMFO6tH2QU_x-sU2eYBB7JG-v1chXZukDmSNsSFmDlrOhrZXU4W14upJHKzvPERWLJwGPGXTpiwJJAlUFC9pcngzQv4tDsCvfcnqpI7Y0JrLV6czGJM1Qp7r-PCvhOuYj6bhF56gLzpoGpP7ytiDbHnGwb0sbElyCm7hzvGz0zl4nBtkkEKEPtTCrelRfNkQK</con:accessToken>
+      <con:accessToken>BQACYIqHy7WMH8mtpPfxeaVqFP5WVbz59DCotg4X59IIbV8Nl4pyiJkBc7zvWDHXlCuIVPss4wxOPwp_lasdC_odbW4BQQW0-oy1rxRyLSYy_C0KOvyDvs0G5BJNzQxJBWEghvXcInGVUWSW7kRtaNo6TG_xS8rhJfm_9dvBG4um0dNchpssCc2ilRj5bs3B_h1-hHN-gzN06S48LX90E2CfPbseb3QDBIYfSYGkQKnYK3iUHjCnKzpier_SIvjPwDqXGsZyoZulTnvG-197ZWpd1J_nMha3aflh2Wb8ABPAuB1O10IPLeem</con:accessToken>
       <con:accessTokenPosition>HEADER</con:accessTokenPosition>
+      <con:accessTokenStatus>RETRIEVED_FROM_SERVER</con:accessTokenStatus>
       <con:accessTokenStartingStatus>RETRIEVED_FROM_SERVER</con:accessTokenStartingStatus>
-      <con:accessTokenIssuedTime>1673030560</con:accessTokenIssuedTime>
+      <con:accessTokenIssuedTime>1673956469</con:accessTokenIssuedTime>
       <con:manualAccessTokenExpirationTime/>
       <con:manualAccessTokenExpirationTimeUnit>SECONDS</con:manualAccessTokenExpirationTimeUnit>
       <con:clientID>0b8dfba8dd274b45be445245e4139691</con:clientID>
