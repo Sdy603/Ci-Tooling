@@ -59,7 +59,7 @@
       <con:request/>
       <con:originalUri>https://api.spotify.com/v1/tracks/7ywzEdEuVG1lsjsRCGJfLy</con:originalUri>
       <con:credentials>
-        <con:selectedAuthProfile>Sam_Auth</con:selectedAuthProfile>
+        <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
         <con:authType>No Authorization</con:authType>
       </con:credentials>
       <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
