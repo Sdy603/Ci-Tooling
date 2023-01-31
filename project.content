@@ -18,7 +18,7 @@ Spotify-API\Tracks.xml
 Spotify-DB-Suite\ShuffleArtistTopThree.xml
 Spotify-DB-Suite\DBSourceToAPI.xml
 Spotify-DB-Suite\APISourceToDB.xml
-Spotify-Artists---v1.2\GetArtistID---v1.2.xml
+Spotify-Artists---v1.3\GetArtistID---v1.2.xml
 Spotify-Albums---v1.2\GetAlbumID---v1.1.xml
 GetMyPlaylists--v1.3\GetMyPlaylist---v1.1.xml
 Spotify-Devices\GetMyDevices.xml
