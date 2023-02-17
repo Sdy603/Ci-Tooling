@@ -102,7 +102,7 @@ From Tracks Inner Join
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep id="5e2a9980-2eee-43f6-aa31-c222707cdc1e" name="Delay" type="delay">
+  <con:testStep id="5e2a9980-2eee-43f6-aa31-c222707cdc1e" name="Delay" type="delay" disabled="true">
     <con:settings/>
     <con:config>
       <delay>1000</delay>

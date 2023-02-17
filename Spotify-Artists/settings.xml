@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testSuite id="d23801ec-c45f-4240-abc8-f4a10a44e560" name="Spotify Artists - v1.3" xmlns:con="http://eviware.com/soapui/config">
+<con:testSuite id="d23801ec-c45f-4240-abc8-f4a10a44e560" name="Spotify Artists" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="d23801ec-c45f-4240-abc8-f4a10a44e560fileName">Spotify-Artists---v1.3</con:setting>
+    <con:setting id="d23801ec-c45f-4240-abc8-f4a10a44e560fileName">Spotify-Artists</con:setting>
   </con:settings>
   <con:runType>SEQUENTIAL</con:runType>
   <con:properties/>

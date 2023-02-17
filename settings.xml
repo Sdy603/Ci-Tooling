@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project activeEnvironment="Default environment" authProfile="Sam_Auth" created="2.7.0" encryptionMode="Not encrypted" id="333b3b92-bc99-4628-afcb-90672b2992ea" name="REST" projectVersion="" resourceRoot="${projectDir}" updated="3.42.1" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config">
+<con:soapui-project activeEnvironment="Default environment" authProfile="Sam_Auth" created="2.7.0" encryptionMode="Not encrypted" id="333b3b92-bc99-4628-afcb-90672b2992ea" name="REST" projectVersion="" resourceRoot="${projectDir}" updated="3.42.1" abortOnError="false" runType="SEQUENTIAL" compositeProjectFormat="1.3" xmlns:con="http://eviware.com/soapui/config">
   <con:description>Sample Projects bases on a virtualized REST service. Please make sure that port 8084 is available on your local machine or you can update the virtual API under the serviceV tool to reflect an open port on your system. You will also have to update the ports on the tests to reflect
 the same ports on the virtual service.</con:description>
   <con:settings>
@@ -81,12 +81,7 @@ the same ports on the virtual service.</con:description>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:requirements/>
-  <con:properties>
-    <con:property>
-      <con:name>test</con:name>
-      <con:value>${REST Request 3#Response#$['images'][1]['url']}</con:value>
-    </con:property>
-  </con:properties>
+  <con:properties/>
   <con:wssContainer>
     <con:outgoing actor="" mustUnderstand="false">
       <con:name>Testing</con:name>
@@ -133,10 +128,11 @@ the same ports on the virtual service.</con:description>
       <con:authorizationURI>https://accounts.spotify.com/authorize</con:authorizationURI>
       <con:accessTokenURI>https://accounts.spotify.com/api/token</con:accessTokenURI>
       <con:redirectURI>http://localhost:8080/callback/</con:redirectURI>
-      <con:accessToken>BQDerwqgovBAjXRPtrCKNIUmi3OY5PvLtcBhIhiuX5n0QUNnvAf2nVVMZfsZMQujP30apzpkYPlYaMY6s59ii7kDQxpkVuYHtPZfjYf2eId9So-QDwIC1Htn5CWSqRr9Rck7FfeNBFLSWqwkQoITHnQsicY98YSSzLCkJJaiL-Ost3lh8-MYoE-8jMhZnFTDBxeARFUqEdBrUhCP_jQ4hmZaNqfKfcGllIMKTUn7MDnh-OnZj2N6K0vDi3SPkvq3-JJqvY6ossao74XxLzEormJzMzx4uJGR-Eziersw5wEDfri4tABmSI9PQQ</con:accessToken>
+      <con:accessToken>BQB1QxxHyHAqr3GQTmDBpdjxp7isQ58nAQ28U0TctqjJw8ZWzhNlCWrLL9IOY6oaGoWooLwlN59OZ31gMAZPj5GeC6LfLvV8RnYH_rRY2jlUzLr5cW9ADVj0H2roTwdru4RkgC0sx5rvnKyURK9oDIdKu8j6mhV0u48HjZFFbj5ZyZ-kmovmP1Kd55iELESX0UzQQgH-LcFVKJzgP3ffYu2kxg4FnsKUrOsk5JyweHqY-2xLh_e4e1zoWHd5gRp1e_ibtwaZU8XjVWXlHsmSjbJRDyl0R6HEWatuDzFqXPTODLevF4RLDuSxOg</con:accessToken>
       <con:accessTokenPosition>HEADER</con:accessTokenPosition>
+      <con:accessTokenStatus>RETRIEVED_FROM_SERVER</con:accessTokenStatus>
       <con:accessTokenStartingStatus>RETRIEVED_FROM_SERVER</con:accessTokenStartingStatus>
-      <con:accessTokenIssuedTime>1674851149</con:accessTokenIssuedTime>
+      <con:accessTokenIssuedTime>1676662458</con:accessTokenIssuedTime>
       <con:manualAccessTokenExpirationTime/>
       <con:manualAccessTokenExpirationTimeUnit>SECONDS</con:manualAccessTokenExpirationTimeUnit>
       <con:clientID>0b8dfba8dd274b45be445245e4139691</con:clientID>
@@ -152,10 +148,22 @@ the same ports on the virtual service.</con:description>
       <con:responseType>id_token</con:responseType>
     </con:oAuth2Profile>
     <con:oAuth2Profile>
-      <con:name>JWT Auth</con:name>
+      <con:name>Token 2</con:name>
       <con:type>OAuth 2.0</con:type>
+      <con:accessToken>sadfgsfgsdfg</con:accessToken>
       <con:accessTokenPosition>HEADER</con:accessTokenPosition>
-      <con:manualAccessTokenExpirationTimeUnit>SECONDS</con:manualAccessTokenExpirationTimeUnit>
+      <con:accessTokenStartingStatus>ENTERED_MANUALLY</con:accessTokenStartingStatus>
+      <con:oAuth2Flow>JWT_GRANT</con:oAuth2Flow>
+      <con:refreshAccessTokenMethod>AUTOMATIC</con:refreshAccessTokenMethod>
+      <con:jwtConfiguration/>
+      <con:responseType>id_token</con:responseType>
+    </con:oAuth2Profile>
+    <con:oAuth2Profile>
+      <con:name>Token 3</con:name>
+      <con:type>OAuth 2.0</con:type>
+      <con:accessToken>asdfgsafdgsfdg</con:accessToken>
+      <con:accessTokenPosition>HEADER</con:accessTokenPosition>
+      <con:accessTokenStartingStatus>ENTERED_MANUALLY</con:accessTokenStartingStatus>
       <con:oAuth2Flow>JWT_GRANT</con:oAuth2Flow>
       <con:refreshAccessTokenMethod>AUTOMATIC</con:refreshAccessTokenMethod>
       <con:jwtConfiguration/>
@@ -197,10 +205,6 @@ the same ports on the virtual service.</con:description>
     <con:service name="Spotify API" type="REST">
       <con:endpoint authProfile="Sam_Auth" proxyHost="" proxyPassword="" proxyPort="" proxyUsername="">http://localhost:8089/</con:endpoint>
     </con:service>
-    <con:property>
-      <con:name>test</con:name>
-      <con:value/>
-    </con:property>
     <con:databaseConnectionContainer>
       <con:databaseConnection>
         <con:name>Sams_Music_DB_JTDS</con:name>
@@ -234,10 +238,6 @@ the same ports on the virtual service.</con:description>
     <con:service name="Spotify API" type="REST">
       <con:endpoint authProfile="Sam_Auth" proxyHost="" proxyPassword="" proxyPort="" proxyUsername="">http://localhost:8092</con:endpoint>
     </con:service>
-    <con:property>
-      <con:name>test</con:name>
-      <con:value>${REST Request 3#Response#$['images'][1]['url']}</con:value>
-    </con:property>
     <con:databaseConnectionContainer>
       <con:databaseConnection>
         <con:name>Sams_Music_DB_JTDS</con:name>
@@ -265,10 +265,6 @@ the same ports on the virtual service.</con:description>
     <con:jmsConnectionContainer/>
   </con:environment>
   <con:environment id="d620f373-fa44-4949-97ea-b813003dd3e8" index="2" name="QA">
-    <con:property>
-      <con:name>test</con:name>
-      <con:value/>
-    </con:property>
     <con:databaseConnectionContainer>
       <con:databaseConnection>
         <con:name>Sams_Music_DB_JTDS</con:name>
@@ -296,10 +292,6 @@ the same ports on the virtual service.</con:description>
     <con:service name="Spotify API" type="REST">
       <con:endpoint authProfile="Samuel1" proxyHost="" proxyPassword="" proxyPort="" proxyUsername="">http://localhost:8089</con:endpoint>
     </con:service>
-    <con:property>
-      <con:name>test</con:name>
-      <con:value/>
-    </con:property>
     <con:databaseConnectionContainer>
       <con:databaseConnection>
         <con:name>Sams_Music_DB_JTDS</con:name>
@@ -327,10 +319,6 @@ the same ports on the virtual service.</con:description>
     <con:service name="Spotify API" type="REST">
       <con:endpoint authProfile="No Authorization" proxyHost="" proxyPassword="" proxyPort="" proxyUsername="">http://localhost:8087</con:endpoint>
     </con:service>
-    <con:property>
-      <con:name>test</con:name>
-      <con:value/>
-    </con:property>
     <con:databaseConnectionContainer>
       <con:databaseConnection>
         <con:name>Sams_Music_DB_JTDS</con:name>
@@ -361,23 +349,17 @@ the same ports on the virtual service.</con:description>
       <con:username>Sdy1091</con:username>
       <con:password>FirstTest</con:password>
     </con:basicAuthEntry>
-    <con:kerberosAuthEntry>
-      <con:name>Temp</con:name>
-      <con:type>SPNEGO/Kerberos</con:type>
-      <con:username>samuel.young@AD.SMARTBEAR.COM</con:username>
-      <con:password>231(Forest1821@)</con:password>
-      <con:domain>AD.SMARTBEAR.COM</con:domain>
-    </con:kerberosAuthEntry>
     <con:oAuth20AuthEntry>
       <con:name>Sam_Auth</con:name>
       <con:type>OAuth 2.0</con:type>
       <con:authorizationURI>https://accounts.spotify.com/authorize</con:authorizationURI>
       <con:accessTokenURI>https://accounts.spotify.com/api/token</con:accessTokenURI>
       <con:redirectURI>http://localhost:8080/callback/</con:redirectURI>
-      <con:accessToken>BQDerwqgovBAjXRPtrCKNIUmi3OY5PvLtcBhIhiuX5n0QUNnvAf2nVVMZfsZMQujP30apzpkYPlYaMY6s59ii7kDQxpkVuYHtPZfjYf2eId9So-QDwIC1Htn5CWSqRr9Rck7FfeNBFLSWqwkQoITHnQsicY98YSSzLCkJJaiL-Ost3lh8-MYoE-8jMhZnFTDBxeARFUqEdBrUhCP_jQ4hmZaNqfKfcGllIMKTUn7MDnh-OnZj2N6K0vDi3SPkvq3-JJqvY6ossao74XxLzEormJzMzx4uJGR-Eziersw5wEDfri4tABmSI9PQQ</con:accessToken>
+      <con:accessToken>BQB1QxxHyHAqr3GQTmDBpdjxp7isQ58nAQ28U0TctqjJw8ZWzhNlCWrLL9IOY6oaGoWooLwlN59OZ31gMAZPj5GeC6LfLvV8RnYH_rRY2jlUzLr5cW9ADVj0H2roTwdru4RkgC0sx5rvnKyURK9oDIdKu8j6mhV0u48HjZFFbj5ZyZ-kmovmP1Kd55iELESX0UzQQgH-LcFVKJzgP3ffYu2kxg4FnsKUrOsk5JyweHqY-2xLh_e4e1zoWHd5gRp1e_ibtwaZU8XjVWXlHsmSjbJRDyl0R6HEWatuDzFqXPTODLevF4RLDuSxOg</con:accessToken>
       <con:accessTokenPosition>HEADER</con:accessTokenPosition>
+      <con:accessTokenStatus>RETRIEVED_FROM_SERVER</con:accessTokenStatus>
       <con:accessTokenStartingStatus>RETRIEVED_FROM_SERVER</con:accessTokenStartingStatus>
-      <con:accessTokenIssuedTime>1674851149</con:accessTokenIssuedTime>
+      <con:accessTokenIssuedTime>1676662458</con:accessTokenIssuedTime>
       <con:manualAccessTokenExpirationTime/>
       <con:manualAccessTokenExpirationTimeUnit>SECONDS</con:manualAccessTokenExpirationTimeUnit>
       <con:clientID>0b8dfba8dd274b45be445245e4139691</con:clientID>
@@ -393,10 +375,22 @@ the same ports on the virtual service.</con:description>
       <con:responseType>id_token</con:responseType>
     </con:oAuth20AuthEntry>
     <con:oAuth20AuthEntry>
-      <con:name>JWT Auth</con:name>
+      <con:name>Token 2</con:name>
       <con:type>OAuth 2.0</con:type>
+      <con:accessToken>sadfgsfgsdfg</con:accessToken>
       <con:accessTokenPosition>HEADER</con:accessTokenPosition>
-      <con:manualAccessTokenExpirationTimeUnit>SECONDS</con:manualAccessTokenExpirationTimeUnit>
+      <con:accessTokenStartingStatus>ENTERED_MANUALLY</con:accessTokenStartingStatus>
+      <con:oAuth2Flow>JWT_GRANT</con:oAuth2Flow>
+      <con:refreshAccessTokenMethod>AUTOMATIC</con:refreshAccessTokenMethod>
+      <con:jwtConfiguration/>
+      <con:responseType>id_token</con:responseType>
+    </con:oAuth20AuthEntry>
+    <con:oAuth20AuthEntry>
+      <con:name>Token 3</con:name>
+      <con:type>OAuth 2.0</con:type>
+      <con:accessToken>asdfgsafdgsfdg</con:accessToken>
+      <con:accessTokenPosition>HEADER</con:accessTokenPosition>
+      <con:accessTokenStartingStatus>ENTERED_MANUALLY</con:accessTokenStartingStatus>
       <con:oAuth2Flow>JWT_GRANT</con:oAuth2Flow>
       <con:refreshAccessTokenMethod>AUTOMATIC</con:refreshAccessTokenMethod>
       <con:jwtConfiguration/>
@@ -428,6 +422,10 @@ the same ports on the virtual service.</con:description>
     <con:tag>
       <con:id>dc3480a9-7c2e-401d-8b60-b4cc621aad39</con:id>
       <con:name>DB Interaction</con:name>
+    </con:tag>
+    <con:tag>
+      <con:id>8f13f6c0-9f55-48d1-90a0-30160a481ba7</con:id>
+      <con:name>Smoke</con:name>
     </con:tag>
   </con:tags>
 </con:soapui-project>

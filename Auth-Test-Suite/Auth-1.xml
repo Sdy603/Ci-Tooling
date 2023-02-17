@@ -1,14 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase discardOkResults="false" failOnError="false" failTestCaseOnErrors="false" id="720982e8-5998-4126-bde7-254f55ca99a1" keepSession="false" name="Test Case 2" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase discardOkResults="false" failOnError="false" failTestCaseOnErrors="false" id="720982e8-5998-4126-bde7-254f55ca99a1" keepSession="false" name="Auth 1" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="720982e8-5998-4126-bde7-254f55ca99a1fileName">Test-Case-2</con:setting>
+    <con:setting id="720982e8-5998-4126-bde7-254f55ca99a1fileName">Auth-1</con:setting>
   </con:settings>
-  <con:testStep type="restrequest" name="REST Request" id="ca134599-1ccd-4430-82f1-61880bc47486">
+  <con:testStep type="datasource" name="Data Source" id="f1881368-6d13-41f7-96e7-7e5445e96bef">
+    <con:settings/>
+    <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:dataSource type="Excel">
+        <con:configuration>
+          <file/>
+          <worksheet/>
+          <cell>A1</cell>
+          <ignoreEmpty>false</ignoreEmpty>
+          <evaluateFormulas>false</evaluateFormulas>
+        </con:configuration>
+      </con:dataSource>
+      <con:shared>true</con:shared>
+      <con:restartShared>true</con:restartShared>
+      <con:restartOnRun>true</con:restartOnRun>
+      <con:stopDatasourceExhausted>false</con:stopDatasourceExhausted>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="API Request" id="ca134599-1ccd-4430-82f1-61880bc47486">
     <con:settings/>
     <con:config service="Spotify API" resourcePath="/v1/artists/{id}/top-tracks" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:restRequest id="dab560e3-0672-4498-b565-cc55ffc15927" mediaType="application/json" name="REST Request">
+      <con:restRequest id="dab560e3-0672-4498-b565-cc55ffc15927" mediaType="application/json" name="API Request">
         <con:settings>
-          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;con:entry key="Authorization" value="BEARER ${API Request#Response}" xmlns:con="http://eviware.com/soapui/config"/></con:setting>
         </con:settings>
         <con:endpoint>https://api.spotify.com</con:endpoint>
         <con:request/>
@@ -25,7 +43,7 @@
           </con:configuration>
         </con:assertion>
         <con:credentials>
-          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:selectedAuthProfile>Sam_Auth</con:selectedAuthProfile>
           <con:authType>No Authorization</con:authType>
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>

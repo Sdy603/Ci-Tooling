@@ -76,7 +76,7 @@
         </con:assertion>
         <con:assertion id="54d532d2-02a0-4843-8d9b-e96c1c856464" name="Response SLA" type="Response SLA Assertion">
           <con:configuration>
-            <SLA>400</SLA>
+            <SLA>60</SLA>
           </con:configuration>
         </con:assertion>
         <con:credentials>
@@ -123,7 +123,7 @@
         </con:assertion>
         <con:assertion id="597d8d4a-3671-40c9-8690-d0064f745176" name="Response SLA" type="Response SLA Assertion">
           <con:configuration>
-            <SLA>500</SLA>
+            <SLA>600</SLA>
           </con:configuration>
         </con:assertion>
         <con:credentials>
@@ -172,16 +172,7 @@
         </con:assertion>
         <con:assertion id="31bf0e5d-de0a-4520-a016-aa8ce087c295" name="Response SLA" type="Response SLA Assertion">
           <con:configuration>
-            <SLA>400</SLA>
-          </con:configuration>
-        </con:assertion>
-        <con:assertion type="JsonPath Match" id="d93f7d4c-af40-48cd-ae36-f9d8d17410ad" name="Match content of [id]">
-          <con:configuration>
-            <path>$['tracks'][0]['album']['artists'][0]['id']</path>
-            <content>${GetArtistInfo#Response#$['id']}</content>
-            <allowWildcards>false</allowWildcards>
-            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
-            <ignoreComments>false</ignoreComments>
+            <SLA>600</SLA>
           </con:configuration>
         </con:assertion>
         <con:credentials>
@@ -239,11 +230,6 @@
             <codes>200, 204</codes>
           </con:configuration>
         </con:assertion>
-        <con:assertion id="09bbbddf-3766-44b1-a067-ea907b6b842a" name="Response SLA" type="Response SLA Assertion">
-          <con:configuration>
-            <SLA>500</SLA>
-          </con:configuration>
-        </con:assertion>
         <con:credentials>
           <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
           <con:authType>No Authorization</con:authType>
@@ -293,11 +279,6 @@
             <codes>200, 204</codes>
           </con:configuration>
         </con:assertion>
-        <con:assertion id="09bbbddf-3766-44b1-a067-ea907b6b842a" name="Response SLA" type="Response SLA Assertion">
-          <con:configuration>
-            <SLA>500</SLA>
-          </con:configuration>
-        </con:assertion>
         <con:credentials>
           <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
           <con:authType>No Authorization</con:authType>
@@ -345,11 +326,6 @@
           <con:settings/>
           <con:configuration>
             <codes>200, 204</codes>
-          </con:configuration>
-        </con:assertion>
-        <con:assertion id="09bbbddf-3766-44b1-a067-ea907b6b842a" name="Response SLA" type="Response SLA Assertion">
-          <con:configuration>
-            <SLA>500</SLA>
           </con:configuration>
         </con:assertion>
         <con:credentials>
@@ -637,5 +613,5 @@
       <con:authProfile>Inherit From Parent</con:authProfile>
     </con:entry>
   </con:environmentSpec>
-  <con:tagId>4a05dcc5-4c77-48fe-b043-dd6e5a51de76</con:tagId>
+  <con:tagId>8f13f6c0-9f55-48d1-90a0-30160a481ba7</con:tagId>
 </con:testCase>

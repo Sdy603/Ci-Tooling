@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testSuite id="a7493fb6-0ec3-40df-b30d-eea3ac6d45b1" name="Spotify Albums - v1.2" xmlns:con="http://eviware.com/soapui/config">
+<con:testSuite id="a7493fb6-0ec3-40df-b30d-eea3ac6d45b1" name="Spotify Albums" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="a7493fb6-0ec3-40df-b30d-eea3ac6d45b1fileName">Spotify-Albums---v1.2</con:setting>
+    <con:setting id="a7493fb6-0ec3-40df-b30d-eea3ac6d45b1fileName">Spotify-Albums</con:setting>
   </con:settings>
   <con:runType>SEQUENTIAL</con:runType>
   <con:properties/>

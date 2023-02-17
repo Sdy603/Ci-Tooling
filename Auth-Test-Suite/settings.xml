@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testSuite id="adfbbf50-5fd6-459e-ad2a-059dfc0da0f2" name="Auth Test Suite" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="adfbbf50-5fd6-459e-ad2a-059dfc0da0f2fileName">Auth-Test-Suite</con:setting>
+  </con:settings>
+  <con:runType>PARALLELL</con:runType>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testSuite>

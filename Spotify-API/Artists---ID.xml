@@ -32,6 +32,12 @@
       <con:params/>
       <con:element>data</con:element>
     </con:representation>
+    <con:representation type="FAULT">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>401</con:status>
+      <con:params/>
+      <con:element xmlns:llp="https://api.spotify.com/v1/artists/4LLpKhyESsyAXpc4laK94U">llp:Fault</con:element>
+    </con:representation>
     <con:request id="822d07e9-03dc-4b82-a9e7-8dc419faf177" mediaType="application/json" name="Request 1">
       <con:settings>
         <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>

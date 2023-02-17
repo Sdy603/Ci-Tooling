@@ -1,29 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase discardOkResults="false" failOnError="false" failTestCaseOnErrors="false" id="6365d63b-ecf9-4f86-aec6-ad818fd60f10" keepSession="false" name="GetAlbumID - v1.1" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase discardOkResults="false" failOnError="false" failTestCaseOnErrors="false" id="fac8819b-23b1-4bb7-89b0-a33cc2120fbd" keepSession="false" name="Auth 3" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="6365d63b-ecf9-4f86-aec6-ad818fd60f10fileName">GetAlbumID---v1.1</con:setting>
+    <con:setting id="fac8819b-23b1-4bb7-89b0-a33cc2120fbdfileName">Auth-3</con:setting>
   </con:settings>
-  <con:testStep id="91530f32-8abf-4da0-9803-f71c39b4f696" name="GetAlbumID" type="restrequest">
+  <con:testStep type="restrequest" name="API Request" id="1e9c22e2-5269-48c3-9da2-64b7b08507a1">
     <con:settings/>
-    <con:config xsi:type="con:RestRequestStep" methodName="V1" resourcePath="/v1/albums/{ID}" service="Spotify API" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:restRequest id="2fcad945-344f-4d05-9631-bbb682724faa" mediaType="application/json" name="GetAlbumID">
+    <con:config service="Spotify API" resourcePath="/v1/artists/{id}/top-tracks" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest id="dab560e3-0672-4498-b565-cc55ffc15927" mediaType="application/json" name="API Request">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
         <con:endpoint>https://api.spotify.com</con:endpoint>
         <con:request/>
-        <con:originalUri>https://api.spotify.com/v1</con:originalUri>
+        <con:originalUri>https://api.spotify.com/v1/artists/4LLpKhyESsyAXpc4laK94U/top-tracks</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="256a8d5c-b667-480f-914d-c4ab2154221e" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="61c8b090-d1bc-46b7-b221-24597f6f1235" name="Response SLA">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
         <con:credentials>
-          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:selectedAuthProfile>Token 3</con:selectedAuthProfile>
           <con:authType>No Authorization</con:authType>
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
         <con:parameters>
-          <con:entry key="market" value="US"/>
-          <con:entry key="ID" value="01XmoBPJ8VwC6IyOEvGhy5"/>
+          <con:entry key="market" value="OU"/>
+          <con:entry key="id" value="4LLpKhyESsyAXpc4laK94U"/>
         </con:parameters>
         <con:parameterOrder>
-          <con:entry>ID</con:entry>
+          <con:entry>id</con:entry>
           <con:entry>market</con:entry>
         </con:parameterOrder>
         <con:environmentSpec>
@@ -48,15 +59,4 @@
   </con:testStep>
   <con:properties/>
   <con:reportParameters/>
-  <con:environmentSpec>
-    <con:entry environmentId="d620f373-fa44-4949-97ea-b813003dd3e8">
-      <con:authProfile>Inherit From Parent</con:authProfile>
-    </con:entry>
-    <con:entry environmentId="0c81de72-7761-426f-a33f-31e9f3406cdd">
-      <con:authProfile>Inherit From Parent</con:authProfile>
-    </con:entry>
-    <con:entry environmentId="ddaf92d0-02d9-4241-a8ee-5df6b1c96e08">
-      <con:authProfile>Inherit From Parent</con:authProfile>
-    </con:entry>
-  </con:environmentSpec>
 </con:testCase>

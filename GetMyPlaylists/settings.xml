@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testSuite id="ed81b7ac-6e53-4bb3-b811-fa37c19e84a1" name="GetMyPlaylists -v1.3" xmlns:con="http://eviware.com/soapui/config">
+<con:testSuite id="ed81b7ac-6e53-4bb3-b811-fa37c19e84a1" name="GetMyPlaylists" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="ed81b7ac-6e53-4bb3-b811-fa37c19e84a1fileName">GetMyPlaylists--v1.3</con:setting>
+    <con:setting id="ed81b7ac-6e53-4bb3-b811-fa37c19e84a1fileName">GetMyPlaylists</con:setting>
   </con:settings>
   <con:runType>SEQUENTIAL</con:runType>
   <con:properties/>
