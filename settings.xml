@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project activeEnvironment="Default environment" authProfile="Sam_Auth" created="2.7.0" encryptionMode="Not encrypted" id="333b3b92-bc99-4628-afcb-90672b2992ea" name="REST" projectVersion="" resourceRoot="${projectDir}" updated="3.42.1" abortOnError="false" runType="SEQUENTIAL" compositeProjectFormat="1.3" xmlns:con="http://eviware.com/soapui/config">
+<con:soapui-project activeEnvironment="Default environment" authProfile="Sam_Auth" created="2.7.0" encryptionMode="Not encrypted" id="333b3b92-bc99-4628-afcb-90672b2992ea" name="REST" projectVersion="" resourceRoot="${projectDir}" updated="3.44.0" abortOnError="false" runType="SEQUENTIAL" compositeProjectFormat="1.3" xmlns:con="http://eviware.com/soapui/config">
   <con:description>Sample Projects bases on a virtualized REST service. Please make sure that port 8084 is available on your local machine or you can update the virtual API under the serviceV tool to reflect an open port on your system. You will also have to update the ports on the tests to reflect
 the same ports on the virtual service.</con:description>
   <con:settings>
@@ -130,7 +130,6 @@ the same ports on the virtual service.</con:description>
       <con:redirectURI>http://localhost:8080/callback/</con:redirectURI>
       <con:accessToken>BQCbA8jn2MmdRnORbfpshP_L_84HUKbnJHAj6Hwb-jD65s9LhC1mYwr9D_4KQYOVhaFEyJgGx9wQV2_VOmtb_PJAunPb-OmhNR1ooYZRweX7rAxX2lL0cBalXpkpildfGsCQlwZuSIIP9pK4C1RAUEfrli5Q6Fch6kM-JEJISdaUATToMHT047Goio8lst-Yb_kMEtDv6e-kYnlhybuKzR_pMxSEbhQN9A--dyxi3mAH9eqmboQ7giUxZylTy5I8JCH97cZuvqRd33xgIIa25oqk-DyrsEDGJPeDNzJjBYilCD6y_BSidj9KVQ</con:accessToken>
       <con:accessTokenPosition>HEADER</con:accessTokenPosition>
-      <con:accessTokenStatus>RETRIEVED_FROM_SERVER</con:accessTokenStatus>
       <con:accessTokenStartingStatus>RETRIEVED_FROM_SERVER</con:accessTokenStartingStatus>
       <con:accessTokenIssuedTime>1676988379</con:accessTokenIssuedTime>
       <con:manualAccessTokenExpirationTime/>
@@ -357,7 +356,6 @@ the same ports on the virtual service.</con:description>
       <con:redirectURI>http://localhost:8080/callback/</con:redirectURI>
       <con:accessToken>BQCbA8jn2MmdRnORbfpshP_L_84HUKbnJHAj6Hwb-jD65s9LhC1mYwr9D_4KQYOVhaFEyJgGx9wQV2_VOmtb_PJAunPb-OmhNR1ooYZRweX7rAxX2lL0cBalXpkpildfGsCQlwZuSIIP9pK4C1RAUEfrli5Q6Fch6kM-JEJISdaUATToMHT047Goio8lst-Yb_kMEtDv6e-kYnlhybuKzR_pMxSEbhQN9A--dyxi3mAH9eqmboQ7giUxZylTy5I8JCH97cZuvqRd33xgIIa25oqk-DyrsEDGJPeDNzJjBYilCD6y_BSidj9KVQ</con:accessToken>
       <con:accessTokenPosition>HEADER</con:accessTokenPosition>
-      <con:accessTokenStatus>RETRIEVED_FROM_SERVER</con:accessTokenStatus>
       <con:accessTokenStartingStatus>RETRIEVED_FROM_SERVER</con:accessTokenStartingStatus>
       <con:accessTokenIssuedTime>1676988379</con:accessTokenIssuedTime>
       <con:manualAccessTokenExpirationTime/>

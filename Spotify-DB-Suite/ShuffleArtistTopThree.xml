@@ -176,7 +176,7 @@
           </con:configuration>
         </con:assertion>
         <con:credentials>
-          <con:selectedAuthProfile>Inherit From Service</con:selectedAuthProfile>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
           <con:authType>No Authorization</con:authType>
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
